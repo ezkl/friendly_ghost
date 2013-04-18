@@ -1,4 +1,4 @@
-# (casper, the) friendly_ghost
+# (casper, the) friendly_ghost [![Build Status](https://travis-ci.org/ezkl/friendly_ghost.png)](https://travis-ci.org/ezkl/friendly_ghost)
 ## Overview
 A simplistic, opinionated Ruby runner for [CasperJS](http://casperjs.org)
 projects. Designed to hand JSON from the last line of STDOUT back to the user.
