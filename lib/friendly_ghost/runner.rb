@@ -21,8 +21,13 @@ module FriendlyGhost
       @result
     end
 
+    def raw_output
+      @process.out
+    end
+
     def parse_result
-      output = @process.out.split(/\n/).last.strip
+      json_line = @process.out.split(/\n/).select { |line| line =~ /\{/ }
+      output = json_line.first.strip
       MultiJson.load(output)
     end
   end

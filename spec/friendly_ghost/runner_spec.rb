@@ -14,7 +14,7 @@ module FriendlyGhost
       let(:response) { runner.command arguments }
 
       context 'success' do
-        let(:arguments) { 'test spec/support/json.js' }
+        let(:arguments) { 'test spec/support/json_1.js' }
 
         it 'should return the status' do
           response['status'].should be_true
@@ -26,7 +26,7 @@ module FriendlyGhost
       end
 
       context 'failure' do
-        let(:arguments) { 'test spec/support/fail.js' }
+        let(:arguments) { 'test spec/support/json_2.js' }
 
         it 'should return the status' do
           response['status'].should be_false
@@ -35,6 +35,13 @@ module FriendlyGhost
         it 'should return an error message' do
           response['error'].should eq 'Failed!'
         end
+      end
+    end
+
+    describe '#raw_output' do
+      it 'should return the raw log output' do
+        runner.command('test spec/support/json_1.js')
+        runner.raw_output.split(/\n/).size.should >= 2
       end
     end
   end

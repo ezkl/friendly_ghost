@@ -6,9 +6,5 @@ casper.wait(500, function() {
 });
 
 casper.run(function() {
-  if(this.test.getFailures().length >= 1) {
-    this.exit(-1);
-  } else {
-    this.exit(0);
-  }
+  this.test.done();
 });
