@@ -2,8 +2,6 @@ language: ruby
 rvm:
   - 2.0.0
   - 1.9.3
-  - jruby-19mode
-  - rbx-19mode
 before_script:
   - "export PHANTOMJS_EXECUTABLE='phantomjs --local-to-remote-url-access=yes --ignore-ssl-errors=yes'"
   - git clone git://github.com/n1k0/casperjs.git
