@@ -36,6 +36,14 @@ module FriendlyGhost
           response['error'].should eq 'Failed!'
         end
       end
+
+      context 'failure without JSON' do
+        let(:arguments) { 'test spec/support/no_json.js' }
+
+        it 'should fail miserably' do
+          expect { response }.to raise_error
+        end
+      end
     end
 
     describe '#raw_output' do
