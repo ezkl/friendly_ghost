@@ -2,7 +2,7 @@ source "https://rubygems.org"
 
 gemspec
 
-gem 'casperjs', github: 'n1k0/casperjs', tag: '1.0.2'
+gem 'casperjs', github: 'n1k0/casperjs', tag: '1.1-beta3'
 
 group :development, :test do
   gem 'guard-rspec', require: false

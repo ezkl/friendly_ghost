@@ -18,8 +18,8 @@ Gem::Specification.new do |gem|
   gem.version       = FriendlyGhost::VERSION
 
   gem.add_dependency             'posix-spawn', '~> 0.3.6'
-  gem.add_dependency             'multi_json', '~> 1.7.2'
-  gem.add_dependency             'casperjs', '~> 1.0.0'
+  gem.add_dependency             'multi_json', '~> 1.10.1'
+  gem.add_dependency             'casperjs', '~> 1.1-beta3'
 
   gem.add_development_dependency 'rake'
   gem.add_development_dependency 'rspec'
